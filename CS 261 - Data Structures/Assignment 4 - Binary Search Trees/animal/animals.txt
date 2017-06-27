@@ -1,0 +1,7 @@
+>Does it live in the water?
+>Is it a mammal?
+-whale
+-sea turtle
+>Does it bark?
+-dog
+-cat

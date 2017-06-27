@@ -1,0 +1,22 @@
+1. How many cost units are spent in the entire process of performing 32 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will double in capacity each time a new item is added to an already full dynamic array? As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the big-oh complexity for a push?
+
+The total cost units spent during the entire process will be 56 [8 (for the first 8 pushes) + 16 (8 copies to new array + 8 new pushes) + 32 (16 copies to new array + 16 new pushes) = 56]
+
+The big-oh complexity is O(1)+ [as N grows larger, it will be more common that each push will have O(1) complexity, but sometimes it will have O(N) complexity when the array must be resized]
+
+
+2. How many cost units are spent in the entire process of performing 32 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will grow by a constant 2 spaces each time a new item is added to an already full dynamic array? As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the big-oh complexity for a push?
+
+The total cost units spent during the entire process will be 260 [8 (for the first 8 pushes) + 10 (8 copies to new array + 2 new pushes) + 10 (8 copies to new array + 2 new pushes) + 12 (10 copies to new array + 2 new pushes) + 14 (12 copies to new array + 2 new pushes) + 16 (14 copies to new array + 2 new pushes) + 18 (16 copies to new array + 2 new pushes) + 20 (18 copies to new array + 2 new pushes) + 22 (20 copies to new array + 2 new pushes) + 24 (22 copies to new array + 2 new pushes) + 26 (24 copies to new array + 2 new pushes) + 28 (26 copies to new array + 2 new pushes) + 30 (28 copies to new array + 2 new pushes) + 32 (30 copies to new array + 2 new pushes) = 260]
+
+The big-oh complexity is O(N) [very frequently, the array will need to be resized and all of the existing elements copied over]
+
+
+3. Suppose that a dynamic array stack doubles its capacity when it is full, and shrinks (on Pop only) its capacity by half when the array is half full or less. Can you devise a sequence of N push() and pop() operations which will result in poor performance (O(N^2) total cost)? How might you adjust the array's shrinking policy to avoid this? (Hint: You may assume that the initial capacity of the array is N/2.)
+
+	I. Push values onto the stack until the capacity of the initial array is filled. 
+	II. Push another value (this resizes the stack and copies all existing values to the new array). 
+	III. Pop a value from the stack, (this resizes the array as it is half full and copies all remaining values to the new array).
+	IV. Repeat steps II and III (this results in to the array being resized for every step of the sequence)
+
+In order to avoid this, the array's shrinking policy can be adjusted to shrink its capacity by half only when the array is a quarter full or less.
