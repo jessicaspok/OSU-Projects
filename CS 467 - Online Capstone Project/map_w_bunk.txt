@@ -1,0 +1,23 @@
+                         _________________________________
+                        |               | |               |
+                        |      BAR      | |    MORGUE     |               N
+                        |_______________| |_______________|            W  +  E
+ _______________________|               | |               |               S
+|  TRENT'S  |  TRENT'S  |    TRENT'S    | |   PHARMACY    |
+|  BEDROOM  |  LIVING   |  FRONT PORCH  | |               |
+|___________|__ROOM_____|_______________| |_______________|
+ _______________________|               | |               |
+|  MOOSE'S  |  MOOSE'S  |    MOOSE'S    | |    POLICE     |
+|  BEDROOM  |  LIVING   |  FRONT PORCH  | |    STATION    |
+|___________|__ROOM_____|_______________| |_______________|
+ _______________________|               | |               |_______________________
+|  SAM'S    |  SAM'S    |     SAM'S     | |    BETH'S     |  BETH'S   |  BETH'S   |
+|  BEDROOM  |  LIVING   |  FRONT PORCH  | |  FRONT PORCH  |  LIVING   |  BEDROOM  |
+|___________|__ROOM_____|_______________| |_______________|__ROOM_____|___________|
+ _______________________|               | |               |_______________________
+|  BOBBY'S  |  BOBBY'S  |    BOBBY'S    | |   CLAIRE'S    |  CLAIRE'S |  CLAIRE'S |
+|  BEDROOM  |  LIVING   |  FRONT PORCH  | |  FRONT PORCH  |  LIVING   |  BEDROOM  |
+|___________|__ROOM_____|_______________|_|_______________|__ROOM_____|___________|
+             |         |                                   |         |
+             | BOBBY'S |                                   | CLAIRE'S|
+             |_OFFICE__|                                   |_BUNKER__|
