@@ -1,0 +1,42 @@
+
+Maximum subarray for line 1
+Enumumeration algorithm, lower bound: 3 Upper bound: 13 Sum: 34
+Enumumeration algorithm (improved), lower bound: 3 Upper bound: 13 Sum: 34
+Recursive algorithm, lower bound: 3 Upper bound: 13 Sum: 34
+Linear-time algorithm, lower bound: 3 Upper bound: 13 Sum: 34
+
+Maximum subarray for line 2
+Enumumeration algorithm, lower bound: 0 Upper bound: 4 Sum: 30
+Enumumeration algorithm (improved), lower bound: 0 Upper bound: 4 Sum: 30
+Recursive algorithm, lower bound: 0 Upper bound: 4 Sum: 30
+Linear-time algorithm, lower bound: 0 Upper bound: 4 Sum: 30
+
+Maximum subarray for line 3
+Enumumeration algorithm, lower bound: 6 Upper bound: 11 Sum: 50
+Enumumeration algorithm (improved), lower bound: 6 Upper bound: 11 Sum: 50
+Recursive algorithm, lower bound: 6 Upper bound: 11 Sum: 50
+Linear-time algorithm, lower bound: 6 Upper bound: 11 Sum: 50
+
+Maximum subarray for line 4
+Enumumeration algorithm, lower bound: 2 Upper bound: 6 Sum: 187
+Enumumeration algorithm (improved), lower bound: 2 Upper bound: 6 Sum: 187
+Recursive algorithm, lower bound: 2 Upper bound: 6 Sum: 187
+Linear-time algorithm, lower bound: 2 Upper bound: 6 Sum: 187
+
+Maximum subarray for line 5
+Enumumeration algorithm, lower bound: 0 Upper bound: 3 Sum: 7
+Enumumeration algorithm (improved), lower bound: 0 Upper bound: 3 Sum: 7
+Recursive algorithm, lower bound: 0 Upper bound: 3 Sum: 7
+Linear-time algorithm, lower bound: 0 Upper bound: 3 Sum: 7
+
+Maximum subarray for line 6
+Enumumeration algorithm, lower bound: 0 Upper bound: 2 Sum: 210
+Enumumeration algorithm (improved), lower bound: 0 Upper bound: 2 Sum: 210
+Recursive algorithm, lower bound: 0 Upper bound: 2 Sum: 210
+Linear-time algorithm, lower bound: 0 Upper bound: 2 Sum: 210
+
+Maximum subarray for line 7
+Enumumeration algorithm, lower bound: 3 Upper bound: 6 Sum: 6
+Enumumeration algorithm (improved), lower bound: 3 Upper bound: 6 Sum: 6
+Recursive algorithm, lower bound: 3 Upper bound: 6 Sum: 6
+Linear-time algorithm, lower bound: 3 Upper bound: 6 Sum: 6

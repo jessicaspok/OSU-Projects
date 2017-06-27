@@ -1,0 +1,14 @@
+Welcome to the Group 26 change-making program code submission.
+
+The included makefile will create two programs that we used to different sections of the project.
+
+To verify our algorithm's correctness using an input file with structure indicated in the assignment,
+run "make changefromfile" and run the resulting executable with the name of a source file. The
+output will be placed in a file named "SOURCEchange.txt", where SOURCE is the name of the source file.
+
+To test algorithm running time for selected values of A and set of coins V, run "make algotiming"
+ and run the resulting executable. Input desired parameters and view results at STDOUT.
+ 
+To create both programs, simply run "make" within this folder and then run the executable of your
+choice as described above.
+
