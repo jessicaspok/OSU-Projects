@@ -1,0 +1,197 @@
+#!/bin/bash
+# program 1: stats
+# Jessica Spokoyny
+# October 10, 2016
+
+#Store temp file name
+tempName="tmp$$"
+
+#Catch signals to remove the temp files if program is 
+#terminated unexpectedly
+trap "rm -f $tempName; exit 1" INT HUP TERM
+
+#Check for correct number of parameters
+#If there are < 1 or > 2 parameters
+if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]
+then
+	echo "Usage: stats {-rows|-cols} [file]" >&2
+	exit 1
+fi
+
+#Check that user specified rows/cols
+#If the row/col parameter is not named correctly
+if [ "${1:0:2}" != "-r" ] && [ "${1:0:2}" != "-c" ]
+then
+	echo "Usage: stats {-rows|-cols} [file]" >&2
+    exit 1
+fi
+
+#If a file is specified, check readability 
+#Give error message if file unreadable
+if [ ! -r "$2" ] && [ "$#" -eq 2 ]
+then
+	echo "Stats: cannot read $2" >&2
+    exit 1
+fi
+
+#User selected rows
+if [ "${1:0:2}" == "-r" ]
+then
+	#Add Row column header
+    echo "Average	 Median" | cat >> $tempName
+
+    while read -r line
+    do
+		numValuesInRow=$(echo $line | wc -w)
+        valuesInLine=$(echo $line | tr "	" "\n")
+
+        #CALCULATE ROW AVERAGE
+
+        #Sum all values in the row
+        sumTotal=0
+        for num in $valuesInLine
+        do
+			sumTotal=$(expr $sumTotal + $num) 
+		done
+
+		#Calculate average without rounding
+        rowAvg=$(expr $sumTotal / $numValuesInRow )
+
+        #Check if we need to round up (if average has a decimal of >= .5) 
+        #If remainder*2 >= numValuesInRow, round up  
+        remainder=$(expr $sumTotal % $numValuesInRow )
+        dblRemainder=$(expr $remainder \* 2 )
+        if [ "$dblRemainder" -ge "$numValuesInRow"  ]
+        then
+			rowAvg=$(expr $rowAvg + 1 )
+		fi
+
+		#CALCULATE ROW MEDIAN
+
+		#Sort numbers in row
+		sortedRowNums=$(echo $valuesInLine | tr " " "\n" | sort -g | tr "\n" " ")
+
+		#Find the median
+		medianPos=$(expr \( $numValuesInRow / 2 \) + 1  )
+		rowMedian=$(echo $sortedRowNums | cut -d " " -f $medianPos)
+
+		echo "$rowAvg	$rowMedian" | cat >> $tempName
+	done < "${2:-/dev/stdin}" #Read from specified file or stdin
+fi
+
+#User selected columns
+if [ "${1:0:2}" == "-c" ]
+then
+	if [ "$#" -eq 2 ]
+	then
+		#File: specify file name
+		numValuesInRow=$(head -n 1 $2 | wc -w)
+	else
+		#Stdin: don't specify file
+		numValuesInRow=$(head -n 1 | wc -w)
+
+		#Add new line for each row
+		allColumns=""
+		break=$'\n'
+		while read line
+		do
+			allColumns="$allColumns$break$line"
+		done < /dev/stdin
+	fi
+
+	#CALCULATE COLUMN AVERAGE
+
+	#Average header
+	echo "Averages:" | cat >> $tempName
+  
+	# Loop through all rows
+	avgResult=""
+	for i in $(seq 1 $numValuesInRow)
+	do
+		if [ "$#" -eq 2 ]
+		then
+			#Cut column based on file name
+			colVals=$(cut -f $i $2 | tr "\n" " ")
+		else
+			#Cut column based on stdin
+			colVals=$(echo "$allColumns" | cut -f $i | tr "\n" " ")
+		fi
+		numValuesInCol=$(echo $colVals | wc -w)
+
+		#Find sum of values in column 
+		sumTotal=0
+		for num in $colVals
+		do
+			sumTotal=$(expr $sumTotal + $num) 
+		done
+
+		#Find average without rounding
+		colAvg=$(expr $sumTotal / $numValuesInCol )
+
+        #Check if we need to round up (if average has a decimal of >= .5) 
+        #If remainder*2 >= numValuesInCol, round up  
+		remainder=$(expr $sumTotal % $numValuesInCol )
+		dblRemainder=$(expr $remainder \* 2 )
+		if [ "$dblRemainder" -ge "$numValuesInCol"  ]
+		then
+			colAvg=$(expr $colAvg + 1 )
+		fi
+
+		#Store average results
+		if [ $i -eq 1 ]
+		then
+			#First average
+			avgResult="$colAvg"
+		else
+			#Add a tab to all remaining averages
+			avgResult="$avgResult	$colAvg"
+		fi
+	done
+
+	#Store averages
+	echo "$avgResult" | cat >> $tempName
+
+	#CALCULATE COLUMN MEDIAN
+
+	#Median header
+	echo "Medians:" | cat >> $tempName
+
+	medianResults=""
+	for i in $(seq 1 $numValuesInRow)
+	do
+		if [ "$#" -eq 2 ]
+		then
+			#Cut column based on file name
+			colVals=$(cut -f $i $2 | tr "\n" " ")
+		else
+			#Cut column based on stdin
+			colVals=$(echo "$allColumns" | cut -f $i | tr "\n" " ")
+		fi
+		numValuesInCol=$(echo $colVals | wc -w)
+
+		#Sort numbers in column
+		sortedColNums=$(echo $colVals | tr " " "\n" | sort -g | tr "\n" " ")
+
+		#Find the median
+		medianPos=$(expr \( $numValuesInCol / 2 \) + 1  )
+		colMedian=$(echo $sortedColNums | cut -d " " -f $medianPos)
+
+		if [ $i -eq 1 ]
+		then
+			#First median
+			medianResults="$colMedian"
+		else
+			#Add a tab to all remaining averages
+			medianResults="$medianResults	$colMedian"
+		fi
+   
+	done
+
+	#Store medians
+	echo "$medianResults" | cat >> $tempName
+
+fi
+
+#Output results and remove temp file
+cat $tempName
+rm -f $tempName
