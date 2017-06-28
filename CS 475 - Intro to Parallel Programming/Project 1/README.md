@@ -9,3 +9,11 @@ Take two Bézier surfaces and use numerical techniques to find the volume betwee
 3. Record the data
 4. Compute the parallel fraction
 5. Determine what maximum speed-up you could ever get
+
+Compile in Linux by typing:
+
+%    g++ -I/usr/local/common/gcc-5.4.0/ project1.cpp –o proj1 –O3 –lm –fopenmp
+
+Execute the program with:
+
+%    ./proj1
