@@ -10,3 +10,11 @@ Create a month-by-month simulation in which each agent of the simulation will ex
 3. Add in some other phenomenon that directly or indirectly controls the growth of the grain and/or the graindeer population.
 4. Record the data
 
+
+Compile in Linux by typing:
+
+g++ -I/usr/local/common/gcc-5.2.0/ project4.cpp -o proj4 -lm –fopenmp
+
+Execute the program with:
+
+% ./proj4
