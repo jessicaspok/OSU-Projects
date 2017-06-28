@@ -2,8 +2,8 @@ Introduction to Databases
 
 Projects
 
-Game Of Thrones Database
+- Game Of Thrones Database
 
-SQL Assignment
+- SQL Assignment
 
 
