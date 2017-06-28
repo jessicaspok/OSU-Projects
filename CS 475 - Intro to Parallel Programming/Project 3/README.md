@@ -15,35 +15,35 @@ Compile and execute the program for fix 1 with a script by typing:
 
 for t in 1 2 4   
 
-> do
+\> do
 
-> echo NUMT = $t
+\> echo NUMT = $t
 
-> for p in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+\> for p in 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 
-> do
+\> do
 
-> echo NUMPAD = $p
+\> echo NUMPAD = $p
 
-> g++ -DNUMT=$t -DNUMPAD=$p -DFIX=1 project3.cpp -o proj3 -lm -fopenmp
+\> g++ -DNUMT=$t -DNUMPAD=$p -DFIX=1 project3.cpp -o proj3 -lm -fopenmp
 
-> ./proj3
+\> ./proj3
 
-> done
+\> done
 
-> done
+\> done
 
 
 Compile and execute the program again for fix 2 by typing:
 
 for t in 1 2 4   
 
-> do
+\> do
 
-> echo NUMT = $t
+\> echo NUMT = $t
 
-> g++ -DNUMT=$t -DNUMPAD=0 -DFIX=2 project3.cpp -o proj3 -lm -fopenmp
+\> g++ -DNUMT=$t -DNUMPAD=0 -DFIX=2 project3.cpp -o proj3 -lm -fopenmp
 
-> ./proj3
+\> ./proj3
 
-> done
+\> done
