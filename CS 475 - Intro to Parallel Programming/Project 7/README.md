@@ -11,5 +11,5 @@ Use OpenCL and OpenGL together to make a cool particle system
 5. Create two OpenCL buffers from the position and color OpenGL buffers
 6. Vary the total number of particles and measure the performance
 
-
+The program can be executed by opening the solution in Visual Studio or simply running the executable.
 
