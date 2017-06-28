@@ -12,9 +12,9 @@ Simple OpenMP Experiment - A great use for parallel programming is identical ope
 5. Calculate the speedup from 1 thread to 4 threads
 6. Compute the parallel fraction
 
-Compile in Linux by typing:
+Compile in Linux by typing:\n
 %    g++ -I/usr/local/common/gcc-5.2.0/ project0.cpp –o proj0 –O3 –lm –fopenmp
 
-Executed the program with:
+Executed the program with:\n
 %    ./proj0
 
