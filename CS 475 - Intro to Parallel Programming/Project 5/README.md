@@ -11,3 +11,5 @@ Test array multiplication and reduction, SIMD and non-SIMD.
 4. Record the data
 5. Calculate and compare speedup for SSE/non-SSE
 
+Compile and execute in Linux by typing:
+python3 runProj5.py
