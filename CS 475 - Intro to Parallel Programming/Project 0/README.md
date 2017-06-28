@@ -16,7 +16,7 @@ Compile in Linux by typing:
 
 %    g++ -I/usr/local/common/gcc-5.2.0/ project0.cpp –o proj0 –O3 –lm –fopenmp
 
-Executed the program with:
+Execute the program with:
 
 %    ./proj0
 
