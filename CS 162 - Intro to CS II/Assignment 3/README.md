@@ -1,11 +1,30 @@
 Fantasy Combat Game:
  - universe contains:
-	-  Type 			Attack 		Defense 	Armor 	Strength Points
-	-  Medusa		2d6 *Glare 	1d6 		3 		8
-	-  Barbarian 	2d6 		2d6 		0 		12
-	-  Vampire 		1d12 		1d6* Charm 	1 		18
-	-  Blue Men 		2d10 		3d6* 		3 		12 *Mob
-	-  Harry Potter 	2d6 		2d6 		0 		10/20*Hogwarts
+	-  Medusa
+		- Attack: 2d6 *Glare 	
+		- Defense: 1d6 		
+		- Armor: 3 		
+		- Strength Points: 8
+	-  Barbarian
+		- Attack: 2d6 		
+		- Defense: 2d6 		
+		- Armor: 0 		
+		- Strength Points: 12
+	-  Vampire
+		- Attack: 1d12 		
+		- Defense: 1d6* Charm 	
+		- Armor: 1 		
+		- Strength Points: 18
+	-  Blue Men
+		- Attack: 2d10 		
+		- Defense: 3d6* 		
+		- Armor: 3 		
+		- Strength Points: 12 *Mob
+	-  Harry Potter
+		- Attack: 2d6 		
+		- Defense: 2d6 		
+		- Armor: 0 		
+		- Strength Points: 10/20*Hogwarts
 	
 	3d6 is rolling three 6-sided dice. 2d10 is rolling two 10-sided dice.
 
