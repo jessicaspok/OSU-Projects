@@ -1,0 +1,11 @@
+MASM program which:
+ - displays name and program title
+ - gets user name and greets user
+ - displays user instructions
+ - repeatedly prompts user for number 
+ - validates user input [-100, -1]
+ - counts and accumulates the user numbers until a non-negative number is entered (non-negative is discarded)
+ - calculates the (rounded int) average of the negative numbers
+ - displays number of negative numbers entered 
+ - displays sum and average of negative numbers
+ - displays terminating message
