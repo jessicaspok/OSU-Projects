@@ -1,0 +1,7 @@
+MASM program which:
+ - displays name and program title
+ - gets user name and greets user
+ - prompts user for number (n) of Fibonacci terms to be displayed
+ - validates user input
+ - calculates and displays all Fibonacci numbers up to and including nth term
+ - displays terminating message
