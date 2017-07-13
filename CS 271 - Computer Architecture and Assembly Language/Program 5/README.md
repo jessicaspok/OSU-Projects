@@ -1,0 +1,12 @@
+MASM program which:
+ - displays name and program title
+ - displays user instructions
+ - prompts user for number (n) of requests
+ - validates user input [10, 200]
+ - generates n random integers in the range [100, 999]
+ - stores integers in consecutive elements of an array
+ - displays list if integers before sorting
+ - sorts list in descending order
+ - calculates and displays median value
+ - displays sorted list
+ - displays terminating message
