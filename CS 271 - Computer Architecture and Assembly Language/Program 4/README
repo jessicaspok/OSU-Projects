@@ -1,0 +1,7 @@
+MASM program which:
+ - displays name and program title
+ - displays user instructions
+ - prompts user for number (n) of composites to be displayed
+ - validates user input [1, 400]
+ - calculates and displays all composite numbers up to and including the nth composite
+ - displays terminating message
