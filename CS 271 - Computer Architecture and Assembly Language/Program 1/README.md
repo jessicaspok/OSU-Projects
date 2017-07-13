@@ -1,5 +1,3 @@
-README:
-
 MASM program which:
  - displays name and program title
  - displays user instructions
