@@ -1,0 +1,11 @@
+Fantasy Combat Tournament:
+ - universe contains fighters from assignment 3
+ - user enters number ot fighters both players will user
+ - first player supplies a lineup of creatures in order
+ - second player then supplies their lineup of creatures in order
+ - display which type of creatures fought and which won after each round
+ - at the end of the tournament display: 
+	- the first, second, and third place finishers
+	- their teams
+	- which side scored more points
+ - option for the user to see a list of the final order of all fighters
