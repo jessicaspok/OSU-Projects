@@ -6,5 +6,5 @@ Projects
   2. Grocery Shopping List
   3. Fantasy Combat Game
   4. Fantasy Combat Tournament
-  
-  Final: Escape The House Game
+    
+    Final: Escape The House Game
