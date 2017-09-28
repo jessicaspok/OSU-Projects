@@ -1,4 +1,4 @@
-Introduction to Computer Science II
+Data Structures
 
 Projects
 
